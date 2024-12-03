@@ -181,4 +181,4 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 .idea
 
-app/data/
+src/data/

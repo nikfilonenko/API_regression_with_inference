@@ -1,6 +1,6 @@
 from fastapi import APIRouter, UploadFile, File
-from app.api.core.models import Car
-from app.api.services.model_logic import make_single_prediction, make_bulk_prediction
+from src.api.core.models import Car
+from src.api.services.model_logic import make_single_prediction, make_bulk_prediction
 
 router = APIRouter()
 

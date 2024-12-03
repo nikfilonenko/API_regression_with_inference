@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 import uvicorn
-from app.api.core.config import settings
-from app.api.routers import predictions
+from src.api.core.config import settings
+from src.api.routers import predictions
 
 app = FastAPI(
     title=settings.PROJECT_NAME,

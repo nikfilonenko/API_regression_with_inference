@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 import pickle
 
-from app.api.core.models import Car
-from app.api.core.utils import save_predictions
+from src.api.core.models import Car
+from src.api.core.utils import save_predictions
 
 current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parent.parent.parent
