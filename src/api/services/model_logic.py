@@ -7,9 +7,10 @@ import pickle
 from src.api.core.models import Car
 from src.api.core.utils import save_predictions
 
+
 current_dir = Path(__file__).resolve().parent
 project_root = current_dir.parent.parent.parent
-model_path = project_root / 'app' / 'ml' / 'weights' / 'best_model.pkl'
+model_path = project_root / 'src' / 'ml' / 'weights' / 'best_model.pkl'
 
 
 with open(model_path, 'rb') as f:
@@ -50,11 +51,16 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
 
     return df_ohe_scaled
 
+
 def make_single_prediction(car: Car):
-    df = pd.DataFrame([car.dict()])
-    df_preprocessed = preprocess_data(df)
-    prediction = model.predict(df_preprocessed)
-    return float(np.expm1(prediction[0]))
+    try:
+        df = pd.DataFrame([car.dict()])
+        df_preprocessed = preprocess_data(df)
+        prediction = model.predict(df_preprocessed)
+        return float(np.expm1(prediction[0]))
+    except Exception as e:
+        raise Exception(e)
+
 
 def make_bulk_prediction(file):
     input_data = pd.read_csv(file.file)
