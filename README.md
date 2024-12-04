@@ -2,7 +2,7 @@
 
 ### Ноутбук с EDA/Model: [Здесь](src/ml/notebooks/regression_with_inference_pro.ipynb)
 
-
+[![API Tests](https://github.com/nikfilonenko/API_regression_with_inference/actions/workflows/api_ridge_regression.yml/badge.svg?branch=master)](https://github.com/nikfilonenko/API_regression_with_inference/actions/workflows/api_ridge_regression.yml)
 -----
 ## Демонстрация работы `API + Ridge regression model`
 
