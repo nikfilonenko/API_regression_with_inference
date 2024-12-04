@@ -209,4 +209,6 @@ Test business_metrics: 169833.728
 
 ![img_2.png](assets/img_2.png)
 
-![img_3.png](assets/img_3.png)
+- predictions:
+
+![img3.png](assets/img3.png)
